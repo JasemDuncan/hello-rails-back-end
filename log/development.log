@@ -32638,3 +32638,26 @@ Processing by Api::V1::GreetingsController#index as HTML
 Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 671)
 
 
+Started GET "/api/v1/greetings" for ::1 at 2022-02-28 17:12:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (15.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:10:in `index'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 18.8ms | Allocations: 19230)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2022-02-28 17:14:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (10.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:10:in `index'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 13.7ms | Allocations: 19232)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2022-02-28 17:14:14 -0500
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 809)
+
+
